@@ -1,0 +1,10 @@
+a=int(input("enter the num"))
+b=int(input("enter the num"))
+c=int(input("enter the num"))
+
+if(a>b and a<c) or (a>c and a<c):
+    print("ans is{a}")
+elif(b>a and b<c)or(b>c and b<c):
+    print("ans is {b}")
+else:
+    print("ans is {c}")
