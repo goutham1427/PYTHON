@@ -1,0 +1,53 @@
+import time 
+import random
+name1=input("enter the name of player 1:")
+name2=input("enter the name of player 2:")
+print("hell0{} and {}".format(name1,name2))
+print("comp has fixed 5 integer")
+print("you both have 3 choices each to guess")
+num=[]
+while len(num)!=5:
+    d=random.randint(1,10)
+    if(d in num):
+        continue
+    else:
+        num.append(d)
+print(num)
+player1=[]
+player2=[]
+s1=0 
+s2=0
+for i in range(3):
+    print("{} enter your guess".format(name1))
+    ans=int(input())
+    while ans  in player1 or ans in player2:
+        ans=int(input("enter again"))
+    player1.append(ans)
+    if (ans in num):
+        print("correct")
+        s1=s1+1 
+    else:
+        print("wrong")
+
+
+print("{} enter your guess ".foremat(name2))
+ans1=int(input())
+while ans1  in player1 or ans1  in player2:
+    ans1=int(input("enter again"))
+player2.append(ans1)
+if (ans1 in num):
+    print("correct")
+    s2=s2+1 
+else:
+    print("wrong")
+    
+time.sleep(2)
+print("---------")
+print("let us have a sumary")
+print("comp has ",num)
+print("{} prdicted{}".format(name1,name2))
+print("{} score is {}".format(name1,name2))
+if (s1>s2):
+    print("{} is winner".format(name1))
+else:
+     print("{} is winner".format(name2))
