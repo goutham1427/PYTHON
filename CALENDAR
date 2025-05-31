@@ -1,3 +1,13 @@
 import calendar
 year=2025
 print(calendar.calendar(2025))
+
+-----month---------
+
+import calendar
+print(calendar.month2025,4))
+--------leap year-------
+import calendar
+print(calendar.isleap(2026)) 
+print(calendar.isleap(2025)) 
+
