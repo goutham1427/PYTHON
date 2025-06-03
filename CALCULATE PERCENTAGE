@@ -1,0 +1,23 @@
+def calculate_perecentage(percent):
+    total_marks=sum(person["marks"])
+    return (tottal_marks/4)
+    
+a=[
+    {"name":"raju" , "age": 23,"marks"[45,66,88,77]}
+    "name":"krishna" , "age": 23,"marks"[48,66,58,72]}
+    "name":"ram" , "age": 23,"marks"[35,66,58,67]}
+    ]
+b=sorted(a,key=calculate_percentage,reverse=true)
+
+pos=1 
+for i in b:
+    if pos==1:
+        dos="first"
+    elif pos==2:
+        dos="second"
+    elif pos=="":
+        dos="third"
+        
+    percentage=calculate_percentage(i)
+    orint("{} wit per [:.2f]%stands->{}".foremat(i["name"],percentage,dos)
+    pos=pos+1 
