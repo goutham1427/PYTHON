@@ -1,0 +1,23 @@
+class employee:
+    profit=10
+    company="tcs"
+    def set_dim(self,name,age,sal,tax,share):
+        self.name=name
+        self.age=age
+        self.tax=tax
+        self.share=share
+        
+    def details(self):
+        print("name:",self.name)
+        print("age:",self.age)
+        print("age:",self.age)  
+        print("tax:",self.tax)  
+        print("share:",self.share)  
+
+e1=employee()
+e1.set_dim("ram",25,50000,0.5,0.1)
+e1.details()
+print()
+e2=employee()
+e2.set_dim("senthil",20,35000,0.7,0.2)
+e2.details()
