@@ -1,0 +1,26 @@
+class rectangle:
+    def set_dim(self, w, h):
+        self.w = w
+        self.h = h  # fixed assignment
+
+    def area(self):
+        print(self.w * self.h)
+
+    def peri(self):
+        print(2 * (self.w + self.h))
+        
+
+l = []
+n = int(input("Enter number of rectangles: "))
+for i in range(n):
+    r = rectangle()
+    w = int(input("Enter width of rectangle {}".format(i+1)))  
+    h = int(input("Enter length of rectangle {}".format(i+1)))
+    r.set_dim(w, h)  
+    l.append(r)     
+
+for i in range(n):
+    print("RECTANGLE NO {}".format(i+1))
+    l[i].area()
+    l[i].peri()
+    print("---------------")
