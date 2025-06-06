@@ -6,4 +6,4 @@ headers=["name", "age", "dept"]
 data = [["raju", "23", "cse"],
         ["kennedy porus", "45", "ece"]]
 
-print(tabulate(data,headers=headers,table format="fancy-grid"))
+print(tabulate(data,headers=headers,tablefmt="fancy_grid"))
