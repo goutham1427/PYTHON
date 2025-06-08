@@ -1,0 +1,25 @@
+n = int(input("Enter the number: "))
+
+
+print("lastDigit(n)", abs(n) %10)
+
+--------------------------------------------
+
+
+Find Last Digit Of a^b for Large Numbers
+
+def get_last_digit(a: str, b: str) -> int:
+    if b == "0":
+        return 1  
+
+    base = int(a[-1])           
+    exp = int(b[-2:]) if len(b) >= 2 else int(b)  
+
+    power = exp % 4
+    if power == 0:
+        power = 4
+
+    return pow(base, power, 10)
+
+# Example usage
+print(get_last_digit("2", "40"))  
