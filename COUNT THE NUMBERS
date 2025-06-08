@@ -1,0 +1,13 @@
+n=int(input())
+def count_dividing_digits(n):
+    n = str(n)
+    count = 0
+    for i in n:
+        if int(i) == 0:
+            continue
+        elif int(n) % int(i) == 0:
+            count += 1
+    return count
+
+# Example usage
+print(count_dividing_digits(n)) 
