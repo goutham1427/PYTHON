@@ -1,0 +1,10 @@
+n=int(input())  
+def reversedigits(n):
+    return int(str(n)[::-1])
+
+    
+def powerofreversedigits(n):
+    rev=reversedigits(n)
+    return n**rev
+  
+print(powerofreversedigits(n))
