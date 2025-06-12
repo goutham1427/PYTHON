@@ -1,0 +1,9 @@
+n=int(input())
+def reversedigits(n):
+    
+    negative = n < 0
+    n = abs(n)
+    reverse=str(n)[::-1]
+    return int(reverse)
+    
+print (reversedigits(n))
