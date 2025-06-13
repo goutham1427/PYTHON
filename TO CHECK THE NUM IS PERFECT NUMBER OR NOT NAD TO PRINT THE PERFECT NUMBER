@@ -1,0 +1,26 @@
+n=int(input("enter the  num="))
+
+def perfect_number(n):
+    divisors=[]
+    for i in range(1,n):
+        if n%i==0:
+            divisors.append(i)
+    if n==sum(divisors):
+        return "perfect number"
+    else:
+        return "not a perfect number"
+
+print(perfect_number(n))
+------------------------------------------------------
+TO PRINT PERFECT NUM BETWEEN 1 TO 100
+def is_perfect(n):
+    sum_of_divisors = 0
+    for i in range(1, n):
+        if n % i == 0:
+            sum_of_divisors += i
+    return sum_of_divisors == n
+
+# Loop from 1 to 100
+for num in range(1, 101):
+    if is_perfect(num):
+        print(num)
