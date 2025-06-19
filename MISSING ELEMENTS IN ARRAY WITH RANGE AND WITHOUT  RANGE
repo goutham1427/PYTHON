@@ -1,0 +1,26 @@
+def missingNum(arr):
+    n=len(arr)+1 
+    total_sum=n*(n+ 1) //2
+    array_sum=sum(arr)
+    missing_num=total_sum-array_sum
+    return missing_num
+   
+arr = list(map(int, input("Enter the array elements separated by space: ").split()))
+print(missingNum(arr))
+
+----------------------------------------------
+WIHTOUT RANGE
+
+def missingNum(arr):
+    maxi=max(arr)
+    mini=min(arr)
+    
+    total_sum=sum(range(mini,maxi+1))
+    array_sum=sum(arr)
+    missing_num=total_sum-array_sum
+    return missing_num
+   
+arr = list(map(int, input("Enter the array elements separated by space: ").split()))
+print(missingNum(arr))
+    
+    
