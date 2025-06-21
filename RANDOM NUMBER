@@ -30,7 +30,7 @@ for i in range(3):
         print("wrong")
 
 
-print("{} enter your guess ".foremat(name2))
+print("{} enter your guess ".format(name2))
 ans1=int(input())
 while ans1  in player1 or ans1  in player2:
     ans1=int(input("enter again"))
