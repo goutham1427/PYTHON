@@ -1,0 +1,26 @@
+def sort0s1s2s(arr):
+    count0 = count1 = count2 = 0
+
+    # Count the number of 0s, 1s, and 2s
+    for num in arr:
+        if num == 0:
+            count0 += 1
+        elif num == 1:
+            count1 += 1
+        else:
+            count2 += 1
+
+    # Overwrite the array with 0s, 1s, and 2s
+    for i in range(count0):
+        arr[i] = 0
+    for i in range(count0, count0 + count1):
+        arr[i] = 1
+    for i in range(count0 + count1, len(arr)):
+        arr[i] = 2
+
+    return arr
+
+user_input = input("Enter numbers (0, 1, 2) separated by spaces: ")
+arr = list(map(int, user_input.split()))
+
+print("Sorted array:", sort0s1s2s(arr))
