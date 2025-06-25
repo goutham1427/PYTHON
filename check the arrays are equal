@@ -1,0 +1,31 @@
+class solution:
+    def checkEqual(self, a, b):
+        c=a.sort()
+        d=b.sort()
+        if a==b:
+            return True
+        else:
+            return False
+user_input=input("enter the  umber by spaces:")            
+a=list(map(int,user_input.split()))
+user_input=input("enter the  umber by spaces:")            
+b=list(map(int,user_input.split()))
+sol = solution()
+print("Arrays are equal?", sol.checkEqual(a, b)) 
+
+  --------------------------------------------------------------------
+
+  class Solution:
+    @staticmethod
+    def checkEqual(a, b):
+        a.sort()
+        b.sort()
+        return a == b
+
+user_input1 = input("Enter the first array (numbers separated by spaces): ")
+a = list(map(int, user_input1.strip().split()))
+
+user_input2 = input("Enter the second array (numbers separated by spaces): ")
+b = list(map(int, user_input2.strip().split()))
+
+print("Arrays are equal?", Solution.checkEqual(a, b))
