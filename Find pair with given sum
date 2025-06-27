@@ -1,0 +1,16 @@
+def twoSum(arr, target):  # Corrected function name
+    n = len(arr)  # find the length of array
+    
+    for i in range(n):             
+        for j in range(i + 1, n):   
+            if arr[i] + arr[j] == target:  
+                return True         
+
+    return False                    
+
+
+# Input from user
+a = list(map(int, input("Enter elements of array A separated by spaces: ").split()))
+t = int(input("Enter target sum: "))
+
+print(twoSum(a, t))
