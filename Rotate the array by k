@@ -1,0 +1,11 @@
+def clockwisedirection(a):
+    if len(a) == 0:
+        return a
+    last = a[-1]
+    return [last] + a[:-1]
+
+
+user_input = input("enter the  umber by spaces:")
+a = list(map(int, user_input.split()))
+rotated = clockwisedirection(a)
+print(rotated)
