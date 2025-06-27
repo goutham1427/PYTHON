@@ -1,0 +1,19 @@
+def is_subset(a, b):
+    for i in range(len(b)):
+        found = False
+        for j in range(len(a)):
+            if b[i] == a[j]:
+                found = True
+                break
+        if not found:
+            return False
+    return True
+
+
+a = list(map(int, input("Enter elements of array A separated by spaces: ").split()))
+b = list(map(int, input("Enter elements of array B separated by spaces: ").split()))
+
+if is_subset(a, b):
+    print("Yes, B is a subset of A.")
+else:
+    print("No, B is not a subset of A.")
