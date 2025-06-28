@@ -1,0 +1,26 @@
+def tripletSumZero(arr, total):
+    arr.sort()
+    n = len(arr)
+
+    for i in range(n - 2):
+        left = i + 1
+        right = n - 1
+
+        while left < right:
+            current_sum = arr[i] + arr[left] + arr[right]
+
+            if current_sum == total:
+                return True
+            elif current_sum < total:
+                left += 1
+            else:
+                right -= 1
+
+    return False  # No such triplet found
+
+            
+    return False
+user_input = input("Enter numbers (0, 1, 2) separated by spaces: ")
+arr = list(map(int, user_input.split()))
+total=int(input("enter the number:"))
+print(tripletSumZero(arr, total))
