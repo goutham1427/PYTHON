@@ -1,0 +1,20 @@
+
+def intersection_elements(a, b):
+    set_a = set(a)
+    set_b = set(b)
+
+    # Find common elements
+    common = set_a & set_b  # or: set_a.intersection(set_b)
+
+    return list(common)
+
+# Input
+a = list(map(int, input("Enter elements of array a: ").split()))
+b = list(map(int, input("Enter elements of array b: ").split()))
+
+result = intersection_elements(a, b)
+
+if result:
+    print("Common elements are:", result)
+else:
+    print("No common elements found.")
