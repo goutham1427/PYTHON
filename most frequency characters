@@ -1,0 +1,24 @@
+def most_frequent_char(s):
+    max_char = ''
+    max_count = 0
+
+    for char in s:
+        if char == ' ':
+            continue  # Skip spaces (optional)
+        count = 0
+        for ch in s:
+            if char == ch:
+                count += 1
+        if count > max_count:
+            max_count = count
+            max_char = char
+
+    return max_char, max_count
+
+# Input
+s = input("Enter a string: ")
+
+# Find and print result
+char, count = most_frequent_char(s)
+print("Most frequent character:", char)
+print("Frequency:", count)
