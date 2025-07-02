@@ -1,0 +1,15 @@
+def intersection_count(a, b):
+    # Convert both arrays to sets (to ensure elements are distinct)
+    set_a = set(a)
+    set_b = set(b)
+
+    # Find intersection
+    common_elements = set_a & set_b  # or: set_a.intersection(set_b)
+
+    return len(common_elements)
+
+# Input
+a = list(map(int, input("Enter elements of array a: ").split()))
+b = list(map(int, input("Enter elements of array b: ").split()))
+
+print("Count of common elements:", intersection_count(a, b))
